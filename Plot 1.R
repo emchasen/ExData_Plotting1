@@ -2,7 +2,7 @@
 library(dplyr)
 
 # set working directory
-setwd("./Google Drive/coursera/exploratory data analysis/project 1/")
+setwd("/Users/elissachasen/Google Drive/coursera/exploratory data analysis/project 1/ExData_Plotting1")
 # read data
 dat1 <- read.table("household_power_consumption.txt", 
                    header = TRUE, sep = ";", na.strings = "?")
