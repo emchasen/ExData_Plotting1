@@ -1,6 +1,6 @@
 # load library
 library(dplyr)
-library(lubridate)
+
 # set working directory
 setwd("./Google Drive/coursera/exploratory data analysis/project 1/")
 # read data
@@ -12,7 +12,11 @@ data <- filter(dat1, Date == "1/2/2007"| Date == "2/2/2007")
 
 
 ## construct plot
+png(file = "Plot 1.png")
 hist(data$Global_active_power, col = "red", 
      xlab = "Global Active Power (kilowatts)", 
      main = "Global Active Power",
-     breaks = 20)
+     breaks = 12)
+dev.off()
+
+
