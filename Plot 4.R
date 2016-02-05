@@ -27,11 +27,23 @@ dat1$DateTime <- strptime(paste(dat1$Date, dat1$Time), format="%d/%m/%Y %H:%M:%S
 
 #-----------end code needed from plot 2----------------------------------
 
-png(file = "Plot 3.png")
+png(file = "Plot 4.png")
+
+par(mfrow = c(2, 2), mar = c(5.1, 4.1, 2, 1))
+plot(dat1$DateTime, dat1$Global_active_power, type = "l",
+     ylab = "Global Active Power", xlab = "")
+
+plot(dat1$DateTime, dat1$Voltage, type = "l", 
+     ylab = "Voltage", xlab = "datetime")
+
 plot(dat1$DateTime, y = dat1$Sub_metering_1, type = "l", 
      ylab = "Energy sub metering", xlab = "")
 lines(dat1$DateTime, dat1$Sub_metering_2, col = "red")
 lines(dat1$DateTime, dat1$Sub_metering_3, col = "blue")
-legend("topright", lty= 1, col = c("black", "red", "blue"), 
+legend("topright", bty = "n", lty= 1, col = c("black", "red", "blue"), 
        legend = c("Sub_metering_1", "Sub_metering_2", "Sub_metering_3"))
+
+plot(dat1$DateTime, dat1$Global_reactive_power, type = "l",
+     ylab = "Global_reactive_power", xlab = "datetime")
+
 dev.off()
