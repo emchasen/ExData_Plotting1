@@ -27,6 +27,7 @@ dat1$DateTime <- strptime(paste(dat1$Date, dat1$Time), format="%d/%m/%Y %H:%M:%S
 
 #-----------end code needed from plot 2----------------------------------
 
+#----------code to create plot 3----------------------------------------
 png(file = "Plot 3.png")
 plot(dat1$DateTime, y = dat1$Sub_metering_1, type = "l", 
      ylab = "Energy sub metering", xlab = "")

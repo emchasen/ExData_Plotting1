@@ -1,6 +1,6 @@
 
 #------------------------------------------------------------------------
-#follow this code if data isn't already downloaded and filtered by date
+# use this code (between lines "--") if data isn't already downloaded and filtered by date
 # load library
 library(dplyr)
 

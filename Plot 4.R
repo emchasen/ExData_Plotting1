@@ -27,6 +27,7 @@ dat1$DateTime <- strptime(paste(dat1$Date, dat1$Time), format="%d/%m/%Y %H:%M:%S
 
 #-----------end code needed from plot 2----------------------------------
 
+#---------code for plot 4-------------------------------------------------
 png(file = "Plot 4.png")
 
 par(mfrow = c(2, 2), mar = c(5.1, 4.1, 2, 1))
